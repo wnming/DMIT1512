@@ -8,12 +8,12 @@ public class AlienBoss : MonoBehaviour
     float moveTime = 0.5f;
     int movement = 0;
 
-    public GameObject bossLaser;
-    public GameObject bossLaserClone;
-    public GameObject boss;
+    [SerializeField] GameObject bossLaser;
+    [SerializeField] GameObject bossLaserClone;
+    [SerializeField] GameObject boss;
 
-    public GameObject player;
-    public GameObject barrier;
+    [SerializeField] GameObject player;
+    [SerializeField] GameObject barrier;
 
     private int bossMove = 7;
 

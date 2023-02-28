@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Barrier : MonoBehaviour
 {
-    public GameObject barrier;
+    [SerializeField] GameObject barrier;
     public int barrierHit = 0;
 
     private int MaxTimeHit = 40;

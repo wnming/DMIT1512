@@ -9,12 +9,11 @@ public class Alien : MonoBehaviour
     float moveTime = 0.5f;
     int movement = 0;
 
-    public GameObject alienLaser;
-    public GameObject alienLaserClone;
-    public GameObject alien;
-
-    public GameObject player;
-    public GameObject barrier;
+    [SerializeField] GameObject alienLaser;
+    [SerializeField] GameObject alienLaserClone;
+    [SerializeField] GameObject alien;
+    [SerializeField] GameObject player;
+    [SerializeField] GameObject barrier;
 
     private int alienMove = DataInformation.alienMove;
     private float speed = DataInformation.alienSpeed;
