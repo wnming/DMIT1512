@@ -17,6 +17,6 @@ public class GameSceneManager : MonoBehaviour
 
     public void LoadGameOver()
     {
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene(0);
     }
 }
