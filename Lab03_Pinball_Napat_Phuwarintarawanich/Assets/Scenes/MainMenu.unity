@@ -250,7 +250,7 @@ MonoBehaviour:
   highScore: {fileID: 964695053}
   highScoreNameTitle: {fileID: 417807011}
   hightScoreName: {fileID: 1156986542}
-  name: {fileID: 1948879913}
+  nameInput: {fileID: 1948879913}
   okButton: {fileID: 1582077574}
 --- !u!1 &231049248
 GameObject:
@@ -2076,7 +2076,7 @@ GameObject:
   - component: {fileID: 1948879914}
   - component: {fileID: 1948879913}
   m_Layer: 5
-  m_Name: HighScoreInput
+  m_Name: HighScoreNameInput
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

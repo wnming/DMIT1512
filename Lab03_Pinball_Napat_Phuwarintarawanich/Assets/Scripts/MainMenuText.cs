@@ -12,7 +12,7 @@ public class MainMenuText : MonoBehaviour
     [SerializeField] TextMeshProUGUI highScore;
     [SerializeField] TextMeshProUGUI highScoreNameTitle;
     [SerializeField] TextMeshProUGUI hightScoreName;
-    [SerializeField] TMP_InputField name;
+    [SerializeField] TMP_InputField nameInput;
     [SerializeField] Button okButton;
 
     GameState gameState;
@@ -24,7 +24,7 @@ public class MainMenuText : MonoBehaviour
         title.text = "Pinball";
         title.fontSize = 200;
         okButton.gameObject.SetActive(false);
-        name.gameObject.SetActive(false);
+        nameInput.gameObject.SetActive(false);
     }
 
     void Update()
@@ -38,7 +38,7 @@ public class MainMenuText : MonoBehaviour
             highScore.text = $"High Score: {gameState.highScore}";
             if (gameState.isHighScore)
             {
-                name.gameObject.SetActive(true);
+                nameInput.gameObject.SetActive(true);
                 okButton.gameObject.SetActive(true);
                 highScoreNameTitle.text = "Enter Name:";
             }

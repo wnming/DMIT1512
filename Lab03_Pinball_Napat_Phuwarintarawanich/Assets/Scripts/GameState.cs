@@ -22,12 +22,15 @@ public class GameState : MonoBehaviour
             Destroy(this.gameObject);
         }
         DontDestroyOnLoad(this.gameObject);
+        //GameObject gameObject = new GameObject("DetectPlayer");
+        gameSceneManager = new GameObject("GameSceneManager").AddComponent<GameSceneManager>();
     }
 
     private void Start()
     {
+        //gameSceneManager = GameObject.FindObjectOfType<GameSceneManager>();
         gameControl = GameObject.FindGameObjectWithTag("GameState").GetComponent<GameControl>();
-        gameSceneManager = GetComponent<GameSceneManager>();
+        //gameSceneManager = GameObject.FindGameObjectWithTag("GameSceneManager").GetComponent<GameSceneManager>();
         isWelcome = true;
         isHighScore = false;
     }

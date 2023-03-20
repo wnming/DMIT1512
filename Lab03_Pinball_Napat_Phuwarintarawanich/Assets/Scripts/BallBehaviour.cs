@@ -20,7 +20,6 @@ public class BallBehaviour : MonoBehaviour
     {
         if(collision.gameObject.tag == "PlayArea")
         {
-            Debug.Log("Hit");
             ball.transform.Translate(new Vector3(0, -4 * Time.deltaTime, 0));
         }
     }

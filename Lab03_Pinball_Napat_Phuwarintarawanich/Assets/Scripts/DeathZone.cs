@@ -22,7 +22,6 @@ public class DeathZone : MonoBehaviour
     IEnumerator Wait(Collider2D collider)
     {
         yield return new WaitForSeconds(1);
-        //Instantiate(ball, spawnPoint.position, spawnPoint.rotation);
         collider.transform.position = spawnPoint.position;
         collider.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
         GameControl.DecreaseLive();

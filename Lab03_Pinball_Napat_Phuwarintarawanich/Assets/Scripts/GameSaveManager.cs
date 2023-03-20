@@ -25,7 +25,7 @@ public class GameSaveManager : MonoBehaviour
     private void Update()
     {
         scoreText.text = $"Score: {gameState.score}";
-        livesText.text = $"Live: {gameState.live}";
+        livesText.text = $"Live(s): {gameState.live}";
         highScoreText.text = $"High Score: {gameState.highScore}";
     }
 

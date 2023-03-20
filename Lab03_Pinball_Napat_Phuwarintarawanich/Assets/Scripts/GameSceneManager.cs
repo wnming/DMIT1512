@@ -28,9 +28,9 @@ public class GameSceneManager : MonoBehaviour
 
     public void SaveNewHighScore()
     {
-        Debug.Log("SaveNewHighScore");
-        GameObject.FindGameObjectWithTag("GameState").GetComponent<GameControl>().SaveCurrentScore();
-        Debug.Log("SaveToDisk");
-        gameState.name = gameState.highScoreName;
+        //Debug.Log("SaveNewHighScore");
+        //GameObject.FindGameObjectWithTag("GameState").GetComponent<GameControl>().SaveCurrentScore();
+        //Debug.Log("SaveToDisk");
+        //gameState.name = gameState.highScoreName;
     }
 }
