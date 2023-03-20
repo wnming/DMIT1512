@@ -14,12 +14,12 @@ public class BumperScript : MonoBehaviour
     public float moveSpeed = 0.4f;
     private bool collide = false;
 
-    GameTester gameTester;
+    GameControl gameControl;
 
 
     void Start()
     {
-        gameTester = GameObject.FindGameObjectWithTag("GameState").GetComponent<GameTester>();
+        gameControl = GameObject.FindGameObjectWithTag("GameState").GetComponent<GameControl>();
         m_Rigidbody = GetComponent<Rigidbody2D>();
         collide = false;
     }
@@ -38,15 +38,7 @@ public class BumperScript : MonoBehaviour
         if(collision.gameObject.tag == "Ball")
         {
             collide = true;
-            gameTester.IncreaseCurrentScore();
-            //add force
-            //m_Rigidbody.velocity = Vector3.up * m_Thrust;
-            //m_Rigidbody.AddForce(Vector3.up * 300, ForceMode2D.Force);
-            //m_Rigidbody.AddForce(Vector3.forward * moveSpeed);
-            // m_Rigidbody.AddForce(transform.up * m_Thrust);
-            //ball.GetComponent<Rigidbody2D>().AddRelativeForce(Vector3.forward * 100, ForceMode2D.Impulse);
-            //.GetComponent<Rigidbody2D>().AddForce(ball.transform.forward);
-            //change bumper's color for 2 sec
+            gameControl.IncreaseCurrentScore();
             StartCoroutine(ChangeColor());
         }
     }

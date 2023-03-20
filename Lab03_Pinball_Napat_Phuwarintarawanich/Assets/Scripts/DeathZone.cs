@@ -7,11 +7,11 @@ public class DeathZone : MonoBehaviour
     [SerializeField] GameObject ball;
     [SerializeField] Transform spawnPoint;
 
-    GameTester gameTester;
+    GameControl GameControl;
 
     private void Start()
     {
-        gameTester = GameObject.FindGameObjectWithTag("GameState").GetComponent<GameTester>();
+        GameControl = GameObject.FindGameObjectWithTag("GameState").GetComponent<GameControl>();
     }
 
     void OnTriggerEnter2D(Collider2D collider)
@@ -25,6 +25,6 @@ public class DeathZone : MonoBehaviour
         //Instantiate(ball, spawnPoint.position, spawnPoint.rotation);
         collider.transform.position = spawnPoint.position;
         collider.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
-        gameTester.DecreaseLive();
+        GameControl.DecreaseLive();
     }
 }

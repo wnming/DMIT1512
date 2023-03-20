@@ -2,12 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class MainMenuText : MonoBehaviour
 {
     [SerializeField] TextMeshProUGUI button;
     [SerializeField] TextMeshProUGUI title;
     [SerializeField] TextMeshProUGUI score;
+    [SerializeField] TextMeshProUGUI highScore;
+    [SerializeField] TextMeshProUGUI highScoreNameTitle;
+    [SerializeField] TextMeshProUGUI hightScoreName;
+    [SerializeField] TMP_InputField name;
+    [SerializeField] Button okButton;
 
     GameState gameState;
 
@@ -17,15 +23,26 @@ public class MainMenuText : MonoBehaviour
         button.text = "Start Game";
         title.text = "Pinball";
         title.fontSize = 200;
-        //score.text = $"High Score: {gameState.highScore}";
+        okButton.gameObject.SetActive(false);
+        name.gameObject.SetActive(false);
     }
 
-    // Update is called once per frame
     void Update()
     {
         button.text = gameState.isWelcome ? "Start Game" : "Play Again";
         title.text = gameState.isWelcome ? "Pinball" : "Game Over";
         title.fontSize = gameState.isWelcome ? 200 : 150;
-        score.text = gameState.isWelcome ? $"High Score: {gameState.highScore}" : $"Score: {gameState.score}";
+        if (!gameState.isWelcome)
+        {
+            score.text = $"Score: {gameState.score}";
+            highScore.text = $"High Score: {gameState.highScore}";
+            if (gameState.isHighScore)
+            {
+                name.gameObject.SetActive(true);
+                okButton.gameObject.SetActive(true);
+                highScoreNameTitle.text = "Enter Name:";
+            }
+            hightScoreName.text = gameState.highScoreName;
+        }
     }
 }

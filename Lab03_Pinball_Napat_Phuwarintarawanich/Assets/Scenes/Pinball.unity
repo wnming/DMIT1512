@@ -133,7 +133,7 @@ GameObject:
   m_Component:
   - component: {fileID: 10631324}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: Square
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1128,7 +1128,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 332495907}
-  - component: {fileID: 332495908}
   m_Layer: 0
   m_Name: SpawnPoint
   m_TagString: Untagged
@@ -1151,18 +1150,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &332495908
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 332495906}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7ad268a46a0108f48a4ec379f84d0973, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &429979113 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7650815387751274196, guid: f9d483ac039960f4da7539c3ddea68d7, type: 3}
@@ -1363,7 +1350,7 @@ GameObject:
   m_Component:
   - component: {fileID: 509483355}
   m_Layer: 7
-  m_Name: KIckOut
+  m_Name: OutlaneWall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2112,6 +2099,7 @@ MonoBehaviour:
   score: 0
   live: 3
   highScore: 0
+  isWelcome: 1
 --- !u!4 &896851039
 Transform:
   m_ObjectHideFlags: 0

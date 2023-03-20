@@ -8,8 +8,11 @@ public class GameState : MonoBehaviour
     public int live = 3;
     public int highScore = 0;
     public bool isWelcome = true;
-    GameSceneManager gameSceneManager = new GameSceneManager();
-    GameTester gameTester;
+    public bool isHighScore = false;
+    public string highScoreName;
+
+    GameSceneManager gameSceneManager;
+    GameControl gameControl;
 
     void Awake()
     {
@@ -23,22 +26,28 @@ public class GameState : MonoBehaviour
 
     private void Start()
     {
-        gameTester = GameObject.FindGameObjectWithTag("GameState").GetComponent<GameTester>();
+        gameControl = GameObject.FindGameObjectWithTag("GameState").GetComponent<GameControl>();
+        gameSceneManager = GetComponent<GameSceneManager>();
         isWelcome = true;
+        isHighScore = false;
     }
 
     private void Update()
     {
-        Debug.Log(live);
         if (live <= 0)
         {
             isWelcome = false;
-            gameTester.SaveCurrentScore();
+            gameControl.SaveCurrentScore();
             gameSceneManager.LoadGameOver();
         }
-        if (score > highScore)
+        if (score > highScore || score == highScore)
         {
+            isHighScore = true;
             highScore = score;
+        }
+        else
+        {
+            isHighScore = false;
         }
     }
 }
