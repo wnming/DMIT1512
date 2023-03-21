@@ -11,8 +11,8 @@ public class GameState : MonoBehaviour
     public bool isHighScore = false;
     public string highScoreName;
 
-    GameSceneManager gameSceneManager;
-    GameControl gameControl;
+    //GameSceneManager gameSceneManager;
+    //GameControl gameControl;
 
     void Awake()
     {
@@ -22,35 +22,11 @@ public class GameState : MonoBehaviour
             Destroy(this.gameObject);
         }
         DontDestroyOnLoad(this.gameObject);
-        //GameObject gameObject = new GameObject("DetectPlayer");
-        gameSceneManager = new GameObject("GameSceneManager").AddComponent<GameSceneManager>();
     }
 
     private void Start()
     {
-        //gameSceneManager = GameObject.FindObjectOfType<GameSceneManager>();
-        gameControl = GameObject.FindGameObjectWithTag("GameState").GetComponent<GameControl>();
-        //gameSceneManager = GameObject.FindGameObjectWithTag("GameSceneManager").GetComponent<GameSceneManager>();
         isWelcome = true;
         isHighScore = false;
-    }
-
-    private void Update()
-    {
-        if (live <= 0)
-        {
-            isWelcome = false;
-            gameControl.SaveCurrentScore();
-            gameSceneManager.LoadGameOver();
-        }
-        if (score > highScore || score == highScore)
-        {
-            isHighScore = true;
-            highScore = score;
-        }
-        else
-        {
-            isHighScore = false;
-        }
     }
 }

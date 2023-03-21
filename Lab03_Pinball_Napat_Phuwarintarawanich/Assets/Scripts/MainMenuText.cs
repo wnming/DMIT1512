@@ -12,6 +12,7 @@ public class MainMenuText : MonoBehaviour
     [SerializeField] TextMeshProUGUI highScore;
     [SerializeField] TextMeshProUGUI highScoreNameTitle;
     [SerializeField] TextMeshProUGUI hightScoreName;
+    [SerializeField] TextMeshProUGUI howToPlay;
     [SerializeField] TMP_InputField nameInput;
     [SerializeField] Button okButton;
 
@@ -36,11 +37,13 @@ public class MainMenuText : MonoBehaviour
         {
             score.text = $"Score: {gameState.score}";
             highScore.text = $"High Score: {gameState.highScore}";
+            howToPlay.text = "";
             if (gameState.isHighScore)
             {
                 nameInput.gameObject.SetActive(true);
                 okButton.gameObject.SetActive(true);
                 highScoreNameTitle.text = "Enter Name:";
+                gameState.highScoreName = "";
             }
             hightScoreName.text = gameState.highScoreName;
         }

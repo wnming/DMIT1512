@@ -11,9 +11,7 @@ public class PlungerScript : MonoBehaviour
 
     public void Pull(float amount)
     {
-        plunger.distance = amount * -10f;
-        plunger.attachedRigidbody.AddForce(Vector2.down * amount * 160f);
-
-        ball.transform.TransformDirection(Vector3.up * 25);
+        plunger.distance = amount * -300f;
+        plunger.attachedRigidbody.AddForce(Vector2.down * amount * 500);
     }
 }
