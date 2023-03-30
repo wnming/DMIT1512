@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerBehaviour : MonoBehaviour
 {
     [SerializeField] private int coinCount = 0;
+    [SerializeField] GameObject player;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,7 +15,14 @@ public class PlayerBehaviour : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetKey(KeyCode.RightArrow) && player.transform.position.x <= 7.8f)
+        {
+            transform.Translate(new Vector3(5 * Time.deltaTime, 0, 0));
+        }
+        if (Input.GetKey(KeyCode.LeftArrow) && player.transform.position.x >= -9.5f)
+        {
+            transform.Translate(new Vector3(-5 * Time.deltaTime, 0, 0));
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
