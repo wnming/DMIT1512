@@ -15,6 +15,7 @@ public enum CollectableType
     None = 0,
     Money = 1,
     Key = 2,
+    Heart = 3,
     Gem = 4,
     //Special = Money | Gem
 }

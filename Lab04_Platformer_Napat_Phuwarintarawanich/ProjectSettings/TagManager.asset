@@ -3,7 +3,13 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - trap
+  - Coin
+  - heart
+  - GameState
+  - finishLevel
+  - deathTrap
   layers:
   - Default
   - TransparentFX
@@ -38,6 +44,12 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Background
+    uniqueID: 3915430091
+    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Tilemap
+    uniqueID: 3249391927
     locked: 0
