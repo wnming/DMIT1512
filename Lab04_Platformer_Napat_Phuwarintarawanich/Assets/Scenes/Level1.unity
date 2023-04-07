@@ -5235,6 +5235,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -4767820586614560773, guid: c8f510d4878de9d408610892ebb6f0b3, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 053ad95323dffb8489d53a97a11ab892, type: 2}
     - target: {fileID: 155124075247740982, guid: c8f510d4878de9d408610892ebb6f0b3, type: 3}
       propertyPath: m_RootOrder
       value: 8
@@ -5311,8 +5315,8 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.21, y: 0.21}
-    newSize: {x: 0.21, y: 0.21}
+    oldSize: {x: 0.23787235, y: 0.23617022}
+    newSize: {x: 1.118, y: 1.11}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -5341,18 +5345,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &1464312093
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1464312090}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: db5229d8ea1dd5f4785f3a909fe1fc5b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1545758037
 GameObject:
   m_ObjectHideFlags: 0
@@ -27856,6 +27848,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2065466043}
     m_Modifications:
+    - target: {fileID: 768368531885393480, guid: e05deb66f8b4455478f1634069415e33, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 612ab0263411aae46963160ce64970b1, type: 2}
     - target: {fileID: 5739129229374803471, guid: e05deb66f8b4455478f1634069415e33, type: 3}
       propertyPath: m_Name
       value: Coin

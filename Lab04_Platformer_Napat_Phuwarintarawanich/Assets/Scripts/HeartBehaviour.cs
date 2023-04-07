@@ -7,7 +7,7 @@ public class HeartBehaviour : MonoBehaviour, ICollectable
     private SpriteRenderer sprite;
     private Collider2D boundingBox;
 
-    public int Value => 1;
+    public int Value => 0;
     public int Collect()
     {
         sprite.enabled = false;

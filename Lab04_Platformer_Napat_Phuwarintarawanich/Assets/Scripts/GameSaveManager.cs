@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
@@ -15,7 +16,7 @@ public class GameSaveManager : MonoBehaviour
 
     private void Awake()
     {
-        path = Path.Combine(Application.persistentDataPath, "CollectedCoins.txt");
+        path = Path.Combine(Application.persistentDataPath, "GameProgress.txt");
     }
     private void Start()
     {
@@ -30,23 +31,30 @@ public class GameSaveManager : MonoBehaviour
         gemsText.text = $"Gems: {gameState.gem}";
     }
 
-    public void LoadFromDisk()
+    public string LoadFromDisk()
     {
+        string text = string.Empty;
         if (File.Exists(path))
         {
             using (StreamReader streamReader = File.OpenText(path))
             {
                 string jsonString = streamReader.ReadToEnd();
                 JsonUtility.FromJsonOverwrite(jsonString, gameState);
-                //gameState.score = 0;
+                //gameState.isWelcome = true;
+                //gameState.onLevel = 1;
+                //text = $"Last played: {gameState.lastPlayed}\n" +
+                //        $"Last colleced coins: {gameState.coin}\n" +
+                //        $"Last colleced gems: {gameState.gem}";
                 gameState.coin = 0;
                 gameState.live = 3;
             }
         }
+        return text;
     }
 
     public void SaveToDisk()
     {
+        gameState.lastPlayed = DateTime.Now.ToString("MM/dd/yyyy HH:mm:ss");
         string jsonString = JsonUtility.ToJson(gameState);
         using (StreamWriter streamWriter = File.CreateText(path))
         {

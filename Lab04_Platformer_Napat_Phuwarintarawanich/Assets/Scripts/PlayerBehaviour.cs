@@ -6,7 +6,6 @@ using UnityEngine;
 
 public class PlayerBehaviour : MonoBehaviour
 {
-    [SerializeField] private int coinCount = 0;
     [SerializeField] GameObject player;
     [SerializeField] Animator animator;
     [SerializeField] SpriteRenderer spriteRenderer;

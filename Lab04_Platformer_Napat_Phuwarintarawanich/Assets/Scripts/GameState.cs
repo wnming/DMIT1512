@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -13,11 +14,7 @@ public class GameState : MonoBehaviour
     public bool isPlayerWins = false;
     public bool isKeyCollect = false;
     public int onLevel = 1;
-    //public bool isHighScore = false;
-    //public string highScoreName;
-
-    //GameSceneManager gameSceneManager;
-    //GameControl gameControl;
+    public string lastPlayed = string.Empty;
 
     void Awake()
     {

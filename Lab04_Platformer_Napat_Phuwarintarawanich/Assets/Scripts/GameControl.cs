@@ -48,6 +48,7 @@ public class GameControl : MonoBehaviour
         currentGameState.isWelcome = false;
         currentGameState.isKeyCollect = false;
         currentGameState.onLevel = 1;
+        SaveCurrentGame();
         gameSceneManager.LoadGameOver();
     }
 
@@ -67,6 +68,7 @@ public class GameControl : MonoBehaviour
             {
                 currentGameState.isPlayerWins = true;
                 currentGameState.onLevel = 1;
+                SaveCurrentGame();
                 gameSceneManager.LoadGameOver();
             }
         }
@@ -81,7 +83,7 @@ public class GameControl : MonoBehaviour
         currentGameState.isPlayerWins= false;
     }
 
-    public void SaveCurrentScore()
+    public void SaveCurrentGame()
     {
         gameSaveManager.SaveToDisk();
     }
