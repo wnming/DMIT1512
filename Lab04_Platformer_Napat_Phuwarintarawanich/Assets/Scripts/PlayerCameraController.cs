@@ -10,6 +10,6 @@ public class PlayerCameraController : MonoBehaviour
 
     void Update()
     {
-        transform.position = player.transform.position + offset;
+        transform.position = player.transform is not null ? player.transform.position + offset : new Vector3(0, 0, 0);
     }
 }

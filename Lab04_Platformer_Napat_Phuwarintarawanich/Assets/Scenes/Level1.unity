@@ -5517,6 +5517,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   passLevel: {fileID: 1632005535}
   dieAudio: {fileID: 1632005536}
+  animator: {fileID: 6477343308878057254}
   currentGameState: {fileID: 0}
 --- !u!114 &1632005533
 MonoBehaviour:
@@ -5533,11 +5534,11 @@ MonoBehaviour:
   coin: 0
   gem: 0
   live: 3
-  highestCoins: 0
   isWelcome: 1
   isPlayerWins: 0
   isKeyCollect: 0
   onLevel: 1
+  lastPlayed: 
 --- !u!4 &1632005534
 Transform:
   m_ObjectHideFlags: 0
@@ -28022,6 +28023,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6477343308315235609, guid: 921e142b80887c747b2ab9c743360322, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6477343308315235614, guid: 921e142b80887c747b2ab9c743360322, type: 3}
       propertyPath: m_Name
       value: Player
@@ -28036,3 +28041,8 @@ PrefabInstance:
       objectReference: {fileID: 1090436013}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 921e142b80887c747b2ab9c743360322, type: 3}
+--- !u!95 &6477343308878057254 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 6477343308315235687, guid: 921e142b80887c747b2ab9c743360322, type: 3}
+  m_PrefabInstance: {fileID: 6477343308878057253}
+  m_PrefabAsset: {fileID: 0}

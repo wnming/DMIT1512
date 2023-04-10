@@ -47,8 +47,8 @@ public class GameControl : MonoBehaviour
         dieAudio.Play();
         currentGameState.isWelcome = false;
         currentGameState.isKeyCollect = false;
-        currentGameState.onLevel = 1;
         SaveCurrentGame();
+        currentGameState.onLevel = 1;
         gameSceneManager.LoadGameOver();
     }
 
@@ -67,8 +67,8 @@ public class GameControl : MonoBehaviour
             else
             {
                 currentGameState.isPlayerWins = true;
-                currentGameState.onLevel = 1;
                 SaveCurrentGame();
+                currentGameState.onLevel = 1;
                 gameSceneManager.LoadGameOver();
             }
         }

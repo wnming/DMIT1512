@@ -21,7 +21,7 @@ public class GameSaveManager : MonoBehaviour
     private void Start()
     {
         gameState = GameObject.FindObjectOfType<GameState>();
-        LoadFromDisk();
+        //LoadFromDisk();
     }
 
     private void Update()
@@ -40,11 +40,6 @@ public class GameSaveManager : MonoBehaviour
             {
                 string jsonString = streamReader.ReadToEnd();
                 JsonUtility.FromJsonOverwrite(jsonString, gameState);
-                //gameState.isWelcome = true;
-                //gameState.onLevel = 1;
-                //text = $"Last played: {gameState.lastPlayed}\n" +
-                //        $"Last colleced coins: {gameState.coin}\n" +
-                //        $"Last colleced gems: {gameState.gem}";
                 gameState.coin = 0;
                 gameState.live = 3;
             }

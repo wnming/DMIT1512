@@ -90,8 +90,7 @@ public class PlayerBehaviour : MonoBehaviour
         }
         if (collision != null && collision.gameObject.tag == "deathTrap")
         {
-
-            Destroy(player);
+            animator.SetTrigger("playerDeath");
             gameControl.Die();
         }
         if (collision != null && collision.gameObject.tag == "trap")
@@ -134,8 +133,6 @@ public class PlayerBehaviour : MonoBehaviour
     private enum PostureState
     {
         idle,
-        running,
-        jumping,
-        falling
+        running
     }
 }

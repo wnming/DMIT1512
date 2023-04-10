@@ -9,11 +9,10 @@ public class GameState : MonoBehaviour
     public int coin = 0;
     public int gem = 0;
     public int live = 3;
-    public int highestCoins = 0;
     public bool isWelcome = true;
     public bool isPlayerWins = false;
     public bool isKeyCollect = false;
-    public int onLevel = 1;
+    public int onLevel;
     public string lastPlayed = string.Empty;
 
     void Awake()
@@ -29,5 +28,6 @@ public class GameState : MonoBehaviour
     private void Start()
     {
         isWelcome = true;
+        onLevel = 1;
     }
 }
